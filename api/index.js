@@ -2,7 +2,6 @@ import express from 'express';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import cookieParser from 'cookie-parser';
-import colors from 'colors';
 import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
@@ -35,7 +34,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`.yellow.underline.bold);
+    // console.log(`Server listening on port ${port}`.yellow.underline.bold);
+    console.log(`Server listening on port ${port}`);
 });
 
 app.use('/api/user', userRoutes);
